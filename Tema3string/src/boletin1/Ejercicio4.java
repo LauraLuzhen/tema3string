@@ -9,6 +9,8 @@ public class Ejercicio4 {
 		// Declaración de variables
 		// Variable que guarda la frase del usuario
 		String frase;
+		//
+		String fraseInvertida;
 
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
@@ -17,8 +19,11 @@ public class Ejercicio4 {
 		System.out.println("Introduce una frase: ");
 		frase = reader.nextLine();
 
+		// Llamamos a la función y la guardamos en una variable
+		fraseInvertida = invertir(frase);
+		
 		// Llamamos a la función y la imprimimos
-		System.out.println(invertir(frase));
+		System.out.println(fraseInvertida);
 
 		// Cerramos el Scanner
 		reader.close();

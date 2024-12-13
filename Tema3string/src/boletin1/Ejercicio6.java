@@ -9,24 +9,27 @@ public class Ejercicio6 {
 		// Declaración de variables
 		// Variable que guarda la frase introducida por el usuario
 		String frase;
-		// Variable que guarda la frase ya lista para comparar
-		String frasePrincipal;
+		// Variable que guarda la frase sin espacios
+		String fraseSinEspacios;
+		// Variable que indica si la palabra es palíndroma o no
+		boolean palindroma;
 
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
 
-		// Le pedimos una frase al usuario
+		// Le pedimos una frase al usuario y convertimos todos los caracteres en
+		// minúsuclas
 		System.out.println("Introduce una frase: ");
-		frase = reader.nextLine();
+		frase = reader.nextLine().toLowerCase();
 
-		// Convertimos todos los caracteres de la cadena a minúsculas
-		frase = frase.toLowerCase();
+		// Le quitamos los espacios a la frase y lo guardamos en una variable
+		fraseSinEspacios = frase.replace(" ", "");
 
-		// Le quitamos los espacios a la frase
-		frasePrincipal = frase.replace(" ", "");
+		// Llamamos a la función y la guardamos en una variable
+		palindroma = palindroma(fraseSinEspacios);
 
-		// Llamamos a la función y la imprimimos
-		System.out.println("¿La cadena es políndroma? " + palindroma(frasePrincipal));
+		// Imprimimos el resultado
+		System.out.println("¿La cadena es políndroma? " + palindroma);
 
 		// Cerramos el Scanner
 		reader.close();

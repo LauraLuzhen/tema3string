@@ -9,6 +9,8 @@ public class Ejercicio3 {
 		// Declaración de variables
 		// Variable que guarda la frase del usuario
 		String frase;
+		// Variable que guarda el número de espacios en blanco
+		int numEspacios;
 
 		// Creamos el Scanner
 		Scanner reader = new Scanner(System.in);
@@ -17,8 +19,11 @@ public class Ejercicio3 {
 		System.out.println("Introduce una frase: ");
 		frase = reader.nextLine();
 
-		// Llamamos a la función y la imprimimos
-		System.out.println("La frase tiene " + cantEspacio(frase) + " espacios.");
+		// Llamamos a la función y la guardamos en una variable
+		numEspacios = cantEspacio(frase);
+
+		// Imprimimos el resultado
+		System.out.println("La frase tiene " + numEspacios + " espacios.");
 
 		// Cerramos el Scanner
 		reader.close();
